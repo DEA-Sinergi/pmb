@@ -14,9 +14,11 @@ if (isset($_POST['simpan'])) {
 	$pekerjan 	   = $_POST['pekerjaan'];
 	$prog_pilihan  = $_POST['prog_pilihan'];
 
-	$query = mysqli_query($konek, "INSERT INTO siswa (nama, no_nisn, alamat, no_telp, asl_sekolah, jns_kelamin, tgl_lahir, nm_ortu, pekerjaan, agama, prog_pilihan) VALUES ('$nama', '$no_nisn', '$alamat', '$no_telp', '$asl_sekolah', '$jns_kelamin', '$tgl_lahir', '$nm_ortu', '$pekerjaan', '$agama', '$prog_pilihan')");
 
-	var_dump($konek);
+	$query = mysqli_query($konek, "INSERT INTO `siswa` (`no_daftar`, `nama`, `no_nisn`, `alamat`, `no_telp`, `asl_sekolah`, `jns_kelamin`, `tgl_lahir`, `nm_ortu`, `pekerjaan`, `agama`, `prog_pilihan`)
+	VALUES ('1', 'lksadkas', 'laksmdlkas', 'alksmd', 'alksdlak', 'alksmdlaksmd', 1, now(), 'alkjsdlkasd', '$pekerjan', '$agama', '$prog_pilihan');");
+
+	var_dump($query);
 	if ($query) {
 		echo "berhasil disimpan";
 	} else {
