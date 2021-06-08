@@ -1,10 +1,10 @@
 <?php
 
-$host		= "localhost";
-$username	= "root";
-$password	= "";
-$db			= "pmb";
+$host		= "localhost"; // your host
+$username	= "wadau";     // your username
+$password	= "icimonji";  // your password
+$db			= "pmb";       // your db
 
-$konek = mysqli_connect($host, $username, $password, $db);
+$konek = new mysqli($host, $username, $password, $db);
 
 ?>
