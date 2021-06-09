@@ -6,7 +6,7 @@
     </div>
 </footer>
 </body>
-<script src="asset/js/materialize.js" charset="utf-8"></script>
+<script src="../asset/js/materialize.js" charset="utf-8"></script>
 <script type="text/javascript">
     const navbar = document.querySelectorAll('.sidenav');
     M.Sidenav.init(navbar);
