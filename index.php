@@ -102,6 +102,27 @@ include 'koneksi.php';
 			</div>
 		</div>
 	</section>
+
+	<section id="tentang" class="section scrollspy">
+		<div class="row">
+			<h3 class="center">Tentang Tebuku</h3>
+			<div class="container">
+				<p class="lead center"><b>TEBUKU</b> Merupakan sebuah sarana pembelajaran serta pengetahuan akan berbagai macam varietas tebu yang telah terdaftar pada Direktorat Jendral Kementrian Pertanian Republik Indonesia yang bermanfaat untuk meningkatkan kualitas produksi tebu dimasyarakat.</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="bantuan" class="grey lighten-3 section scrollspy">
+		<br>
+		<div class="container">
+			<h3 class="center">Panduan Pengguna</h3>
+			<div class="center" style="font-size: 25px">
+				<span>Mulai &#8594; Pengguna Mengakses aplikasi &#8594; Lihat Daftar variestas &#8594; Selesai</span>
+			</div>
+		</div>
+		<br><br>
+	</section>
+
 	<!-- modal detail -->
 
 	<div class="modal fade" id="newSubmenuModal" tabindex="-1" role="dialog" aria-labelledby="newSubmenuModalLabel" aria-hidden="true">
@@ -136,6 +157,7 @@ include 'koneksi.php';
 			</div>
 		</div>
 	</div>
+
 
 </main>
 

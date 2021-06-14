@@ -12,23 +12,26 @@
 <body>
     <!-- header -->
     <header>
-        <nav class="green lighten-2">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="index.php" class="brand-logo">Home</a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="profile.php">Profile</a></li>
-                        <li><a href="pengumuman.php">Pengumuman</a></li>
-                        <li><a href="fasilitas.php">Fasilitas</a></li>
-                        <li><a href="daftar_psb.php">Daftar PSB</a></li>
-                        <li><a href="data_psb.php">Data PSB</a></li>
-                        <li><a href="hasil_test.php">Hasil Tes</a></li>
-                        <li><a href="login.php">Login</a></li>
-                    </ul>
+
+        <div class="navbar-fixed">
+            <nav class="green lighten-2">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="index.php" class="brand-logo">Home</a>
+                        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#tentang">Profile</a></li>
+                            <li><a href="#bantuan">Pengumuman</a></li>
+                            <li><a href="fasilitas.php">Fasilitas</a></li>
+                            <li><a href="daftar_psb.php">Daftar PSB</a></li>
+                            <li><a href="data_psb.php">Data PSB</a></li>
+                            <li><a href="hasil_test.php">Hasil Tes</a></li>
+                            <li><a href="login.php">Login</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
 
         <ul class="sidenav" id="mobile-demo">
             <li><a href="profile.php">Profile</a></li>
