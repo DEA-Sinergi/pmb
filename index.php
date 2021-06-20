@@ -28,14 +28,14 @@ include 'koneksi.php';
 	<section id="home" class="section scrollspy">
 		<div class="slider">
 			<ul class="slides">
-				<li> <img src="asset/img/slider/slider1.jpeg"> </li>
-				<li> <img src="asset/img/slider/slider2.jpg"> </li>
-				<li> <img src="asset/img/slider/slider3.png"> </li>
+				<li> <img src="asset/img/slider/1.jpg"> </li>
+				<li> <img src="asset/img/slider/2.jpg"> </li>
+				<li> <img src="asset/img/slider/3.jpg"> </li>
 			</ul>
 		</div>
 	</section>
 
-	<section style="padding: 20px 0;" id="variestas" class="section scrollspy grey lighten-3">
+	<section id="variestas" class="section scrollspy grey lighten-3">
 		<div class="container">
 			<div class="row">
 				<h3 class="center grey-text text-darken-3">Daftar Berita</h3>
