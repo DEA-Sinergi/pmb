@@ -52,7 +52,7 @@ include 'koneksi.php';
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
-										<td><a href="" class="btn mb-1 mt-2 btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
 									</tr>
 								</table>
 
@@ -72,7 +72,7 @@ include 'koneksi.php';
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
-										<td><a href="" class="btn mb-1 mt-2 btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
 									</tr>
 								</table>
 
@@ -92,7 +92,7 @@ include 'koneksi.php';
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
-										<td><a href="" class="btn mb-1 mt-2 btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
 									</tr>
 								</table>
 
@@ -104,57 +104,59 @@ include 'koneksi.php';
 	</section>
 
 	<section id="tentang" class="section scrollspy">
-		<div class="row">
-			<h3 class="center">Tentang Tebuku</h3>
-			<div class="container">
-				<p class="lead center"><b>TEBUKU</b> Merupakan sebuah sarana pembelajaran serta pengetahuan akan berbagai macam varietas tebu yang telah terdaftar pada Direktorat Jendral Kementrian Pertanian Republik Indonesia yang bermanfaat untuk meningkatkan kualitas produksi tebu dimasyarakat.</p>
+		<div class="container">
+			<div class="row center">
+				<h3>VISI</h3>
+				<p>Sekolah Unggul Berkarakter Berbasis Nilai-nilai Islam.</p>
+				<h3>MISI</h3>
+				<p>1. Menyelenggarakan pendidikan dan pembelajaran holistik berbasis nilai-nilai islam.</p>
+				<p>2. Meningkatkan mutu sumber daya manusia yang mempunyai keunggulan moral, intelektual, sehat, dan profesional.</p>
+				<p>3. Mewujudkan sarana dan prasarana yang modern dan berstandart Internasional.</p>
+				<p>4. Melaksanakan tata kelola sekolah secara kredibel tansparan, akuntabel, tanggung jawab, dan adil.</p>
+				<p>5. Mengembangkan kerja sama untuk perluasan akses dan peningkatan mutu pendi</p>
 			</div>
 		</div>
 	</section>
 
 	<section id="bantuan" class="grey lighten-3 section scrollspy">
 		<br>
-		<div class="container">
-			<h3 class="center">Panduan Pengguna</h3>
-			<div class="center" style="font-size: 25px">
-				<span>Mulai &#8594; Pengguna Mengakses aplikasi &#8594; Lihat Daftar variestas &#8594; Selesai</span>
+		<div class="container center">
+			<h3>Fasilitas</h3>
+			<div>
+				<h6>1. Ruang Kelas Full AC</h6>
+				<h6>2. Lapangan Futsal</h6>
+				<h6>3. Lapangan Basket</h6>
+				<h6>4. Lapangan Volly</h6>
+				<h6>5. Unit Kesehatan Sekolah</h6>
+				<h6>6. Koperasi</h6>
+				<h6>7. Laboratorium IPA</h6>
+				<h6>8. Laboratorium Komputer</h6>
+				<h6>9. Jaringan Internet/Wifi</h6>
+				<h6>10. Musholla</h6>
+				<h6>11. Aula</h6>
 			</div>
 		</div>
-		<br><br>
 	</section>
 
-	<!-- modal detail -->
 
-	<div class="modal fade" id="newSubmenuModal" tabindex="-1" role="dialog" aria-labelledby="newSubmenuModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="newSubmenuModalLabel">Detail Berita</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<form action="" method="">
-					<div class="modal-body">
-						<div class="form-group">
-							<img src="asset/img/default.jpg" width="250" alt="gambar">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
-						</div>
-						<div class="form-group">
-							<textarea name="isi" class="form-control" id="isi" cols="30" rows="10" placeholder="Isi Berita"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="date" class="form-control" id="tanggal" name="tanggal">
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-light" data-dismiss="modal">Batal</button>
-						<button type="submit" class="btn btn-primary">Tambah</button>
-					</div>
-				</form>
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+		<div class="modal-content center-align">
+			<div class="form-group">
+				<img src="asset/img/default.jpg" width="250" alt="gambar">
 			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="judul" name="judul" value="Judul">
+			</div>
+			<div class="form-group">
+				<input name="isi" class="form-control" id="isi" value="Isi Berita"></input>
+			</div>
+			<div class="form-group">
+				<input type="date" class="form-control" id="tanggal" name="tanggal">
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="modal-close waves-effect waves-green btn-flat">Tutup</button>
 		</div>
 	</div>
 

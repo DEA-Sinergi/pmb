@@ -11,7 +11,7 @@
     const slider = document.querySelectorAll('.slider');
     M.Slider.init(slider, {
         indicators: false,
-        height: 500,
+        height: 600,
         transition: 600,
         interval: 3000
     });
@@ -21,6 +21,12 @@
 
     const image = document.querySelectorAll('.materialboxed');
     M.Materialbox.init(image);
+
+    const select = document.querySelectorAll('select');
+    M.FormSelect.init(select);
+
+    const modal = document.querySelectorAll('.modal');
+    M.Modal.init(modal);
 
     const scroll = document.querySelectorAll('.scrollspy');
     M.ScrollSpy.init(scroll, {

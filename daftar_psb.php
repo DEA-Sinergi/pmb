@@ -91,13 +91,12 @@ if (isset($_POST['simpan'])) {
 								</div>
 								<div class="form-group">
 									<div class="input-field col s12">
-										<select class="custom-select custom-select-lg mb-3" id="kelamin" name="kelamin">
-											<option selected>Open this select menu</option>
-											<option value="1">One</option>
-											<option value="2">Two</option>
-											<option value="3">Three</option>
+										<select>
+											<option value="" disabled selected>Jenis Kelamin</option>
+											<option value="l">Laki - Laki</option>
+											<option value="p">Perempuan</option>
 										</select>
-										<label for="kelamin">Jenis Kelamin</label>
+										<label>Jenis Kelamin</label>
 									</div>
 								</div>
 								<div class="form-group">
