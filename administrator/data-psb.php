@@ -43,8 +43,8 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        <?php 
-                        $query = $konek->query('SELECT * FROM siswa ORDER BY nama');
+                        <?php
+                        $query  = $konek->query('SELECT * FROM siswa ORDER BY nama');
                         while ($row = $query->fetch_assoc()) {
                         ?>
                         <tr>
@@ -62,7 +62,7 @@
                             <td><?php echo $row['prog_pilihan']?></td>
                             <td>
                                 <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#PSBE"><i class="fas fa-fw fa-edit"></i>Edit</a>
-                                <a href="" class="badge badge-danger text-white"><i class="fas fa-fw fa-trash"></i>Hapus</a>
+                                <a href="" class="badge badge-danger text-white" onclick=""><i class="fas fa-fw fa-trash"></i>Hapus</a>
                             </td>                            
                         </tr>
                         
