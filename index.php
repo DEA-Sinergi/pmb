@@ -56,13 +56,20 @@
   <section id="home" class="section scrollspy" style="position:relative; top: -14px;">
 		<div class="slider">
 			<ul class="slides">
+<<<<<<< HEAD
 				<li> <img src="asset/img/slider/slider4.jpeg"> </li>
 				<li> <img src="asset/img/slider/slider5.jpeg"> </li>
 				<li> <img src="asset/img/slider/slider6.jpg"> </li>
+=======
+				<li> <img src="asset/img/slider/1.jpg"> </li>
+				<li> <img src="asset/img/slider/2.jpg"> </li>
+				<li> <img src="asset/img/slider/3.jpg"> </li>
+>>>>>>> f6bcc4595deaa8c819d2ec4275dd8983d04d8a01
 			</ul>
 		</div>
 	</section>
 
+<<<<<<< HEAD
   <div class="container">
     <div class="section">
 
@@ -87,6 +94,9 @@
 	</section>
 
 	<section style="padding: 20px 0;" id="variestas" class="section scrollspy">
+=======
+	<section id="variestas" class="section scrollspy grey lighten-3">
+>>>>>>> f6bcc4595deaa8c819d2ec4275dd8983d04d8a01
 		<div class="container">
 			<div class="row">
 				<h3 class="center grey-text text-darken-3">Daftar Berita</h3>
@@ -103,7 +113,11 @@
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
+<<<<<<< HEAD
 										<td><a href="" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+=======
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
+>>>>>>> f6bcc4595deaa8c819d2ec4275dd8983d04d8a01
 									</tr>
 								</table>
 
@@ -123,7 +137,7 @@
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
-										<td><a href="" class="btn mb-1 mt-2 btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
 									</tr>
 								</table>
 
@@ -143,7 +157,7 @@
 										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
 									</tr>
 									<tr>
-										<td><a href="" class="btn mb-1 mt-2 btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
 									</tr>
 								</table>
 
@@ -157,6 +171,7 @@
 		</div>
 	</section>
 
+<<<<<<< HEAD
 
   <div class="parallax-container valign-wrapper">
     <div class="parallax"><img src="asset/img/slider-home.jpg" alt="Unsplashed background img 3"></div>
@@ -169,6 +184,64 @@
           <h5 class="white-text">Company Bio</h5>
           <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
+=======
+	<section id="tentang" class="section scrollspy">
+		<div class="container">
+			<div class="row center">
+				<h3>VISI</h3>
+				<p>Sekolah Unggul Berkarakter Berbasis Nilai-nilai Islam.</p>
+				<h3>MISI</h3>
+				<p>1. Menyelenggarakan pendidikan dan pembelajaran holistik berbasis nilai-nilai islam.</p>
+				<p>2. Meningkatkan mutu sumber daya manusia yang mempunyai keunggulan moral, intelektual, sehat, dan profesional.</p>
+				<p>3. Mewujudkan sarana dan prasarana yang modern dan berstandart Internasional.</p>
+				<p>4. Melaksanakan tata kelola sekolah secara kredibel tansparan, akuntabel, tanggung jawab, dan adil.</p>
+				<p>5. Mengembangkan kerja sama untuk perluasan akses dan peningkatan mutu pendi</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="bantuan" class="grey lighten-3 section scrollspy">
+		<br>
+		<div class="container center">
+			<h3>Fasilitas</h3>
+			<div>
+				<h6>1. Ruang Kelas Full AC</h6>
+				<h6>2. Lapangan Futsal</h6>
+				<h6>3. Lapangan Basket</h6>
+				<h6>4. Lapangan Volly</h6>
+				<h6>5. Unit Kesehatan Sekolah</h6>
+				<h6>6. Koperasi</h6>
+				<h6>7. Laboratorium IPA</h6>
+				<h6>8. Laboratorium Komputer</h6>
+				<h6>9. Jaringan Internet/Wifi</h6>
+				<h6>10. Musholla</h6>
+				<h6>11. Aula</h6>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+		<div class="modal-content center-align">
+			<div class="form-group">
+				<img src="asset/img/default.jpg" width="250" alt="gambar">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-control" id="judul" name="judul" value="Judul">
+			</div>
+			<div class="form-group">
+				<input name="isi" class="form-control" id="isi" value="Isi Berita"></input>
+			</div>
+			<div class="form-group">
+				<input type="date" class="form-control" id="tanggal" name="tanggal">
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="modal-close waves-effect waves-green btn-flat">Tutup</button>
+		</div>
+	</div>
+>>>>>>> f6bcc4595deaa8c819d2ec4275dd8983d04d8a01
 
         </div>
       </div>

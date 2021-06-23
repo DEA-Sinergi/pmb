@@ -52,7 +52,6 @@ if (isset($_POST['simpan'])) {
 	<div class="section">
 
 		<div class="divider"></div>
-		<!--Basic Form-->
 		<div id="basic-form" class="section">
 			<div class="row">
 				<div class="col s12 m12 l12">
@@ -60,78 +59,77 @@ if (isset($_POST['simpan'])) {
 						<h4 class="header2">Isi Data Pendaftaran Siswa Baru</h4>
 						<div class="row">
 							<form class="col s12" method="POST" action="proses_simpan.php" enctype="multipart/form-data">
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="nama" type="text" name="nama" required="nama">
 										<label for="nama">Nama</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="no_nisn" type="text" name="no_nisn" required="no_nisn">
 										<label for="no_nisn">No NISN</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="alamat" type="text" name="alamat" required="alamat">
 										<label for="sifat_morfologi">Alamat</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="no_telp" type="text" name="no_telp" required="no_telp">
 										<label for="no_telp">No Telepon</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="asal_sekolah" type="text" name="asal_sekolah" required="asal_sekolah">
 										<label for="asal_sekolah">Asal Sekolah</label>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="exampleFormControlSelect2">Example multiple select</label>
-									<select multiple class="form-control" id="exampleFormControlSelect2">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-									</select>
+									<div class="input-field col s12">
+										<select>
+											<option value="" disabled selected>Jenis Kelamin</option>
+											<option value="l">Laki - Laki</option>
+											<option value="p">Perempuan</option>
+										</select>
+										<label>Jenis Kelamin</label>
+									</div>
 								</div>
-
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="agama" type="text" name="agama" required="agama">
 										<label for="agama">Agama</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="tem_lahir" type="text" name="tem_lahir" required="tem_lahir">
 										<label for="tem_lahir">Tempat Lahir</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="tgl_lahir" type="date" name="tgl_lahir">
 										<label for="tgl_lahir">Tanggal Lahir</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="n_ortu" type="text" name="n_ortu" required="n_ortu">
 										<label for="n_ortu">Nama Orang Tua</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="Pekerjaan" type="text" name="Pekerjaan" required="Pekerjaan">
 										<label for="Pekerjaan">Pekerjaan</label>
 									</div>
 								</div>
-								<div class="row">
+								<div class="form-group">
 									<div class="input-field col s12">
 										<input id="prog_pilihan" type="text" name="prog_pilihan" required="prog_pilihan">
 										<label for="prog_pilihan">Program Pilihan</label>
@@ -142,22 +140,22 @@ if (isset($_POST['simpan'])) {
 									<div class="col-sm-7">
 										<input type="file" name="foto" class="form-control" colums id="inputfoto" required="foto" placeholder="foto"></br>
 									</div>
+								</div>
 
-									<div class="row">
-										<div class="input-field col s12">
-											<button class="btn waves-effect waves-light right" type="submit" name="action">Simpan
-												<i class="material-icons right">send</i>
-											</button>
-
-										</div>
+								<div class="form-group">
+									<div class="input-field col s12">
+										<button class="btn waves-effect waves-light right" type="submit" name="action">Simpan
+											<i class="material-icons right">send</i>
+										</button>
 									</div>
-							</form>
+								</div>
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
+
 <?php include "layout/footer.php" ?>
