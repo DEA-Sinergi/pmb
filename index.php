@@ -1,57 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>SMP Muhammadiyah 3 - Kutorejo</title>
-
-  <!-- CSS  -->
-  <link href="asset/css/icon.css" rel="stylesheet">
-  <link href="asset/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="asset/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  <style>
-    .tabs .indicator {
-      background-color: #1976d2;
-    }
-  </style>
-</head>
-<body>
-  <nav class="blue" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#fasilitas">Fasilitas</a></li>
-        <li><a href="#berita">Berita</a></li>
-        <!-- menu ini nantik muncul ketika sudah login -->
-        <?php
-          session_start();
-          if($_SESSION['status'] == "login"){
-        ?>
-        <li><a href="#bantuan">Pengumuman</a></li>
-        <li><a href="data_psb.php">Data PSB</a></li>
-        <li><a href="hasil_test.php">Hasil Tes</a></li>
-        <li><a href="controller/logout.php">Logout</a></li>
-        <?php
-          }
-        ?>
-        <li><a href="#daftarPsb" data-toggle="modal" class="modal-trigger">Daftar PSB</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#fasilitas">Fasilitas</a></li>
-        <li><a href="#berita">Berita</a></li>
-        <!-- menu ini nantik muncul ketika sudah login -->
-        <!-- <li><a href="#bantuan">Pengumuman</a></li> -->
-        <!-- <li><a href="data_psb.php">Data PSB</a></li> -->
-        <!-- <li><a href="hasil_test.php">Hasil Tes</a></li> -->
-        <li><a href="#daftarPsb" data-toggle="modal" class="modal-trigger">Daftar PSB</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
+<?php include "layout/header.php" ?>
 
   <section id="home" class="section scrollspy" style="position:relative; top: -14px;">
 		<div class="slider">
@@ -90,66 +37,37 @@
 		<div class="container">
 			<div class="row">
 				<h3 class="center grey-text text-darken-3">Daftar Berita</h3>
+        <?php
+          include "config/koneksi.php";
+          $query = $konek->query("SELECT * FROM `tb_berita` ORDER BY `id_berita` DESC LIMIT 3");
+          
+          // if($query->num_rows() = 0){
+          //   echo "berita masih kosong";
+          // }
+          // while ($query) {
+            // var_dump($query->num_rows());
+        ?>
+        <?php  ?>
+          <div class="col m4 s12">
+            <div class="card-panel center">
+              <p class="light"><b>
+                  <img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/default.jpg">
+                  <table>
+                    <tr>
+                      <h4 class="text-justify">Lorem ipsum</h4>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
+                    </tr>
+                    <tr>
+                      <td><a href="" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+                    </tr>
+                  </table>
   
-				<div class="col m4 s12">
-					<div class="card-panel center">
-						<p class="light"><b>
-								<img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/default.jpg">
-								<table>
-									<tr>
-										<h4 class="text-justify">Lorem ipsum</h4>
-									</tr>
-									<tr>
-										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
-									</tr>
-									<tr>
-										<td><a href="" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
-									</tr>
-								</table>
+                </b></p>
+            </div>
+          </div>
 
-							</b></p>
-					</div>
-				</div>
-
-				<div class="col m4 s12">
-					<div class="card-panel center">
-						<p class="light"><b>
-								<img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/default.jpg">
-								<table>
-									<tr>
-										<h4 class="text-justify">Lorem ipsum</h4>
-									</tr>
-									<tr>
-										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
-									</tr>
-									<tr>
-										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
-									</tr>
-								</table>
-
-							</b></p>
-					</div>
-				</div>
-
-				<div class="col m4 s12">
-					<div class="card-panel center">
-						<p class="light"><b>
-								<img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/default.jpg">
-								<table>
-									<tr>
-										<h4 class="text-justify">Lorem ipsum</h4>
-									</tr>
-									<tr>
-										<td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
-									</tr>
-									<tr>
-										<td><a class="waves-effect waves-light btn modal-trigger right" href="#modal1">Detail Berita</a></td>
-									</tr>
-								</table>
-
-							</b></p>
-					</div>
-				</div>
 			</div>
       <center>
         <a href="" class="btn btn-info">Lebih Banyak</a>
@@ -157,28 +75,9 @@
 		</div>
 	</section>
 
-
   <div class="parallax-container valign-wrapper">
     <div class="parallax"><img src="asset/img/slider-home.jpg" alt="Unsplashed background img 3"></div>
   </div>
-
-  <footer class="page-footer blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="">Moch.Faisol Aristama</a>
-      </div>
-    </div>
-  </footer>
 
   <div id="daftarPsb" class="modal">
     <div class="modal-content">
@@ -300,11 +199,4 @@
     </div>
   </div>
 
-
-  <!--  Scripts-->
-  <script src="asset/js/jquery-2.1.1.min.js"></script>
-  <script src="asset/js/materialize.js"></script>
-  <script src="asset/js/init.js"></script>
-
-  </body>
-</html>
+<?php include "layout/footer.php"?>

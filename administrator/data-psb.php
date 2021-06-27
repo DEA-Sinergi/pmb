@@ -62,30 +62,10 @@
                             <td><?php echo $row['prog_pilihan']?></td>
                             <td>
                                 <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#PSBE"><i class="fas fa-fw fa-edit"></i>Edit</a>
-                                <a href="" class="badge badge-danger text-white" onclick=""><i class="fas fa-fw fa-trash"></i>Hapus</a>
+                                <a href="../controller/administrator/psbHapus.php?id=<?php echo $row['id_siswa']?>" class="badge badge-danger text-white" onclick=""><i class="fas fa-fw fa-trash"></i>Hapus</a>
                             </td>                            
                         </tr>
-                        
                         <?php } ?>
-
-                        <tr>
-                            <td>1</td>
-                            <td>Shad Decker</td>
-                            <td>231234123</td>
-                            <td>jl.terserah aja dah</td>
-                            <td>080808080899</td>
-                            <td>SMA manaaja</td>
-                            <td>laki-laki</td>
-                            <td>2008/11/13</td>
-                            <td>Nama Decker</td>
-                            <td>Deadwood</td>
-                            <td>Islam</td>
-                            <td>RPL</td>
-                            <td>
-                                <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#PSBE"><i class="fas fa-fw fa-edit"></i>Edit</a>
-                                <a href="" class="badge badge-danger text-white"><i class="fas fa-fw fa-trash"></i>Hapus</a>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -109,42 +89,52 @@ while ($rowE = $queryE->fetch_assoc()) {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="POST">
+            <form action="../controller/administrator/psbEdit.php?id=<?php echo $rowE['id_siswa']?>" method="POST">
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" placeholder="nama" value="<?php echo $rowE['nama']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">No NISN</label>
                         <input type="text" class="form-control" id="no_nisn" name="no_nisn" placeholder="no_nisn" value="<?php echo $rowE['no_nisn']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Alamat</label>
                         <input type="text" class="form-control" id="alamat" name="alamat" placeholder="alamat" value="<?php echo $rowE['alamat']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">No Telp</label>
                         <input type="text" class="form-control" id="no_telp" name="no_telp" placeholder="no_telp" value="<?php echo $rowE['no_telp']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Asal Sekolah</label>
                         <input type="text" class="form-control" id="asl_sekolah" name="asl_sekolah" placeholder="asl_sekolah" value="<?php echo $rowE['asl_sekolah']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Jenis Kelamin</label>
                         <input type="text" class="form-control" id="jns_kelamin" name="jns_kelamin" placeholder="jns_kelamin" value="<?php echo $rowE['jns_kelamin']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Nama Orang Tua</label>
                         <input type="text" class="form-control" id="nm_ortu" name="nm_ortu" placeholder="nm_ortu" value="<?php echo $rowE['nm_ortu']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Pekerjaan</label>
                         <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" placeholder="pekerjaan" value="<?php echo $rowE['pekerjaan']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Agama</label>
                         <input type="text" class="form-control" id="agama" name="agama" placeholder="agama" value="<?php echo $rowE['agama']?>">
                     </div>
                     <div class="form-group">
+                        <label for="">Prog Pilihan</label>
                         <input type="text" class="form-control" id="prog_pilihan" name="prog_pilihan" placeholder="prog_pilihan" value="<?php echo $rowE['prog_pilihan']?>">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-success">Edit</button>
+                    <button type="submit" class="btn btn-success" name="submit">Edit</button>
                 </div>
             </form>
         </div>

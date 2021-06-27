@@ -17,58 +17,43 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Judul</th>
+                            <th>Isi Pengumuman</th>
+                            <th>Tanggal</th>
                             <th>Gambar</th>
-                            <th>Nama Siswa</th>
-                            <th>Nama Sekolah</th>
-                            <th>Keterangan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>No</th>
+                            <th>Judul</th>
+                            <th>Isi Pengumuman</th>
+                            <th>Tanggal</th>
                             <th>Gambar</th>
-                            <th>Nama Siswa</th>
-                            <th>Nama Sekolah</th>
-                            <th>Keterangan</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
+                    <?php
+                        include "../config/koneksi.php";
+                        $no = 1;
+                        $query = $konek->query("SELECT * FROM tb_pengumuman");
+                        while ($row = $query->fetch_assoc()) {
+                    ?>
                     <tbody>
                         <tr>
-                            <td>1</td>
-                            <td><img src='../asset/img/default.jpg' width='100' height='100'></td>
-                            <td>Regional Director</td>
-                            <td>Edinburgh</td>
-                            <td>Lulus</td>
+                            <td><?php echo $no++ ?></td>
+                            <td><?php echo $row['judul']?></td>
+                            <td><?php echo $row['isi_berita']?></td>
+                            <td><?php echo date_format(date_create($row['tanggal']), "d-m-Y")?></td>
+                            <td><img src="../asset/img/pengumuman/<?php echo $row['gambar']?>" alt="" style="width: 55px"></td>
                             <td>
-                                <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#newSubmenuModalEdit">Edit</a>
-                                <a href="" class="badge badge-danger text-white">Hapus</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><img src='../asset/img/default.jpg' width='100' height='100'></td>
-                            <td>Javascript Developer</td>
-                            <td>Singapore</td>
-                            <td>Lulus</td>
-                            <td>
-                                <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#newSubmenuModalEdit">Edit</a>
-                                <a href="" class="badge badge-danger text-white">Hapus</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><img src='../asset/img/default.jpg' width='100' height='100'></td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>Lulus</td>
-                            <td>
-                                <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#newSubmenuModalEdit">Edit</a>
-                                <a href="" class="badge badge-danger text-white">Hapus</a>
+                                <a href="" class="badge badge-success text-white" data-toggle="modal" data-target="#newSubmenuModalEdit<?php echo $row['id_pengumuman']?>">Edit</a>
+                                <a href="../controller/administrator/pengHapus.php?id=<?php echo $row['id_pengumuman']?>" class="badge badge-danger text-white">Hapus</a>
                             </td>
                         </tr>
                     </tbody>
+                    <?php } ?>
                 </table>
             </div>
         </div>
@@ -92,24 +77,23 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="">
+            <form action="../controller/administrator/pengTambah.php" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="judul" name="judul" placeholder="Judul">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="isi_pengumuman" name="isi_pengumuman" placeholder="Isi Pengumuman">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" id="tanggal" name="tanggal">
+                    </div>
                     <div class="form-group">
                         <input type="file" class="form-control" id="foto" name="foto">
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" placeholder="Nama Sekolah">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="nama_sekolah" name="nama_sekolah" placeholder="Nama Sekolah">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="ket" name="ket" placeholder="Keterangan">
-                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-primary">Tambah</button>
+                    <button type="submit" name="tambah" class="btn btn-primary">Tambah</button>
                 </div>
             </form>
         </div>
@@ -117,8 +101,12 @@
 </div>
 
 
-<!-- Modal Edit -->
-<div class="modal fade" id="newSubmenuModalEdit" tabindex="-1" role="dialog" aria-labelledby="newSubmenuModalEditLabel" aria-hidden="true">
+<?php
+    include "../config/koneksi.php";
+    $queryE = $konek->query("SELECT * FROM tb_pengumuman");
+    while ($rowE = $queryE->fetch_assoc()) {
+?>
+<div class="modal fade" id="newSubmenuModalEdit<?php echo $rowE['id_pengumuman']?>" tabindex="-1" role="dialog" aria-labelledby="newSubmenuModalEditLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,7 +115,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="POST">
+            <form action="../controller/administrator/pengEdit.php?id=<?php echo $rowE['id_pengumuman']?>" method="POST" enctype="multipart/form-data">
                 <div class="modal-body">
 
                     <div class="form-group">
@@ -135,22 +123,25 @@
                         <input type="file" class="form-control" id="foto" name="foto">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nama_siswa" name="nama_siswa" placeholder="Nama Sekolah">
+                        <input type="text" class="form-control" id="judul" name="judul" value="<?php echo $rowE['judul']?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="nama_sekolah" name="nama_sekolah" placeholder="Nama Sekolah">
+                        <input type="text" class="form-control" id="isi_pengumuman" name="isi_pengumuman" value="<?php echo $rowE['isi_berita']?>">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="ket" name="ket" placeholder="Keterangan">
+                        <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?php echo $rowE['tanggal'] ?>">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-success">Edit</button>
+                    <button type="submit" class="btn btn-success" name="edit">Edit</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<?php } ?>
+<!-- Modal Edit -->
 
 <?php include "layout/footer.php"; ?>

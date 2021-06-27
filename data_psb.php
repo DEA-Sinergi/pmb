@@ -21,24 +21,6 @@
 					<td>Lorem, ipsum.</td>
 					<td>Lorem, ipsum dolor.</td>
 				</tr>
-				<tr>
-					<td>2</td>
-					<td><img src="asset/img/default.jpg" width='50' height='50'></td>
-					<td>Lorem, ipsum.</td>
-					<td>Lorem, ipsum dolor.</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td><img src="asset/img/default.jpg" width='50' height='50'></td>
-					<td>Lorem, ipsum.</td>
-					<td>Lorem, ipsum dolor.</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td><img src="asset/img/default.jpg" width='50' height='50'></td>
-					<td>Lorem, ipsum.</td>
-					<td>Lorem, ipsum dolor.</td>
-				</tr>
 			</tbody>
 		</table>
 	</div>

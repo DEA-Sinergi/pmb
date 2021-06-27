@@ -45,25 +45,25 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'index.php') ? "active" : "";  ?>">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'data-psb.php') ? "active" : "";  ?>">
                 <a class="nav-link" href="data-psb.php">
                     <i class="fas fa-fw fa-user-graduate"></i>
                     <span>Data PSB</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'hasil.php') ? "active" : "";  ?>">
                 <a class="nav-link" href="hasil.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Hasil Tes</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'pengumuman.php') ? "active" : "";  ?>">
                 <a class="nav-link" href="pengumuman.php">
                     <i class="fas fa-bullhorn"></i>
                     <span>Pengumuman</span></a>
