@@ -27,7 +27,9 @@
         <li><a href="#berita">Berita</a></li>
         <!-- menu ini nantik muncul ketika sudah login -->
         <?php
+        if(!isset($_SESSION)){
           session_start();
+        }
           if($_SESSION['status'] == "login"){
         ?>
         <li><a href="pengumuman.php">Pengumuman</a></li>
