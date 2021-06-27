@@ -17,12 +17,12 @@ if(isset($_POST['tambah'])){
         if($query){
             echo "<script>
                   alert('Data Berhasil Di Tambahkan');
-                  window.location.href='../../administrator/index.php'
+                  window.location.href='../../administrator/berita.php'
                   </script>";
         }else{
             echo "<script>
                   alert('Data Gagal Di Tambahkan Silahkan Hubungi CS')
-                  window.location.replace('../../administrator/index.php');
+                  window.location.replace('../../administrator/berita.php');
                   </script>";
         }
     }

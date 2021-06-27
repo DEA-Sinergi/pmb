@@ -40,33 +40,30 @@
         <?php
           include "config/koneksi.php";
           $query = $konek->query("SELECT * FROM `tb_berita` ORDER BY `id_berita` DESC LIMIT 3");
+        
+          while ($row = $query->fetch_assoc()) {
           
-          // if($query->num_rows() = 0){
-          //   echo "berita masih kosong";
-          // }
-          // while ($query) {
-            // var_dump($query->num_rows());
         ?>
-        <?php  ?>
-          <div class="col m4 s12">
-            <div class="card-panel center">
-              <p class="light"><b>
-                  <img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/default.jpg">
-                  <table>
-                    <tr>
-                      <h4 class="text-justify">Lorem ipsum</h4>
-                    </tr>
-                    <tr>
-                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, quae!...</td>
-                    </tr>
-                    <tr>
-                      <td><a href="" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
-                    </tr>
-                  </table>
-  
-                </b></p>
-            </div>
+        <div class="col m4 s12">
+          <div class="card-panel center">
+            <p class="light"><b>
+                <img class="materialboxed" data-caption="Gambar Tebu" width="250" src="asset/img/<?php echo $row['gambar']?>">
+                <table>
+                  <tr>
+                    <h4 class="text-justify"><?php echo $row['judul']?></h4>
+                  </tr>
+                  <tr>
+                    <td><?php echo $row['isi_berita']?>...</td>
+                  </tr>
+                  <tr>
+                    <td><a href="" class="btn btn-rounded btn-info" data-toggle="modal" data-target="#newSubmenuModal"><span class="btn-icon-left"><i class="fa fa-address-card-o color-success"></i> </span>Detail Berita</a></td>
+                  </tr>
+                </table>
+
+              </b></p>
           </div>
+        </div>
+        <?php } ?>
 
 			</div>
       <center>

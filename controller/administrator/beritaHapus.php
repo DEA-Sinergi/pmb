@@ -10,16 +10,16 @@ if(isset($_GET['id'])){
     if($query){
         echo "<script>
               alert('Data Berhasil Di Hapus');
-              window.location.href='../../administrator/index.php'
+              window.location.href='../../administrator/berita.php'
               </script>";
     }else{
         echo "<script>
               alert('Data Gagal Di Hapus');
-              window.location.href='../../administrator/index.php'
+              window.location.href='../../administrator/berita.php'
               </script>";
     }
 }else{
-    header("Location: ../../administrator/index.php");
+    header("Location: ../../administrator/berita.php");
 }
 
 ?>

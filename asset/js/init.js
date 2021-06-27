@@ -2,6 +2,7 @@
   $(function(){
 
     $('.sidenav').sidenav();
+    $('.scrollspy').scrollSpy();
     $('.parallax').parallax();
     $('.slider').slider();
     $('.modal').modal();

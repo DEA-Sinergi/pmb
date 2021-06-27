@@ -45,7 +45,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'index.php') ? "active" : "";  ?>">
+            <li class="nav-item <?php echo (end(explode('/', $_SERVER[REQUEST_URI])) == 'berita.php') ? "active" : "";  ?>">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>

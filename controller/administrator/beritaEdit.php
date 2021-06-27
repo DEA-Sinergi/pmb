@@ -24,12 +24,12 @@ if(isset($_POST['edit'])){
     if($query){
         echo "<script>
         alert('Data Berhasil Di Edit');
-        window.location.href='../../administrator/index.php'
+        window.location.href='../../administrator/berita.php'
         </script>";
     }else{
         echo "<script>
         alert('Data Gagal Di Edit');
-        window.location.href='../../administrator/index.php'
+        window.location.href='../../administrator/berita.php'
         </script>";
     }
 }
