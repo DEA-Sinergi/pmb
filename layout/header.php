@@ -27,9 +27,8 @@
         <li><a href="#berita">Berita</a></li>
         <!-- menu ini nantik muncul ketika sudah login -->
         <?php
-        if(!isset($_SESSION)){
-          session_start();
-        }
+        session_start();
+        if($_SESSION != null){
           if($_SESSION['status'] == "login"){
         ?>
         <li><a href="pengumuman.php">Pengumuman</a></li>
@@ -38,10 +37,13 @@
         <li><a href="controller/logout.php">Logout</a></li>
         <?php
           }
-          if($_SESSION['status'] != "login"){
+        }
+        if ($_SESSION == null) {
         ?>
         <li><a href="#daftarPsb" data-toggle="modal" class="modal-trigger">Daftar PSB</a></li>
-        <?php } ?>
+        <?php
+          }
+        ?>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -50,19 +52,23 @@
         <li><a href="#berita">Berita</a></li>
         <!-- menu ini nantik muncul ketika sudah login -->
         <?php
-          session_start();
+        session_start();
+        if($_SESSION != null){
           if($_SESSION['status'] == "login"){
         ?>
-        <li><a href="#bantuan">Pengumuman</a></li>
+        <li><a href="pengumuman.php">Pengumuman</a></li>
         <li><a href="data_psb.php">Data PSB</a></li>
         <li><a href="hasil_test.php">Hasil Tes</a></li>
         <li><a href="controller/logout.php">Logout</a></li>
         <?php
           }
-          if($_SESSION['status'] != "login"){
+        }
+        if ($_SESSION == null) {
         ?>
         <li><a href="#daftarPsb" data-toggle="modal" class="modal-trigger">Daftar PSB</a></li>
-        <?php } ?>
+        <?php
+          }
+        ?>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
