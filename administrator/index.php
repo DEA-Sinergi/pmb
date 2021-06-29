@@ -40,7 +40,7 @@
                                     </div>
                                     <form class="user" method="POST" action="../controller/administrator/login.php">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Username" value="">
+                                            <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Username" value="">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">

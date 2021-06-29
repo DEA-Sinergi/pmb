@@ -25,23 +25,6 @@
                             <th>aksi</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>No Daftar</th>
-                            <th>Nama</th>
-                            <th>No NISN</th>
-                            <th>Alamat</th>
-                            <th>No Telp</th>
-                            <th>Asal Sekolah</th>
-                            <th>Jenis Kelamin</th>
-                            <th>Tanggal Lahir</th>
-                            <th>Nama Orang Tua</th>
-                            <th>Pekerjaan</th>
-                            <th>Agama</th>
-                            <th>Program Pilihan</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         <?php
                         $query  = $konek->query('SELECT * FROM siswa ORDER BY nama');

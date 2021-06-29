@@ -1,12 +1,13 @@
 <?php
 include "../../config/koneksi.php";
 
-// var_dump($konek);
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 $query = $konek->query("SELECT * FROM `admin` WHERE `username` = '$username' AND `password` = '$password'");
-if($query){
+$cek   = $query->num_rows;
+
+if($cek != null){
     session_start();
     $_SESSION['status'] = "login";
     header("Location: ../../administrator/berita.php");
