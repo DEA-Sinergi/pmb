@@ -1,8 +1,8 @@
 <?php
 
-$host		= "localhost"; // your host
-$username	= "wadau";     // your username
-$password	= "icimonji";  // your password
-$db			= "pmb";       // your db
+$host        = "localhost"; // your host
+$username    = "root";     // your username
+$password    = "";  // your password
+$db            = "pmb";       // your db
 
 $konek = new mysqli($host, $username, $password, $db);
