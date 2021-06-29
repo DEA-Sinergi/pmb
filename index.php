@@ -11,7 +11,7 @@
 	</section>
 
   <div class="container">
-    <div class="section">
+    <div class="section section scrollspy" id="profile">
 
       <div class="row">
         <div class="col s12 center">
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-	<section id="tentang" class="section scrollspy grey lighten-3">
+	<section id="fasilitas" class="section scrollspy grey lighten-3">
 		<div class="row">
 			<h4 class="center">Fasilitas</h4>
 			<div class="container">
@@ -33,7 +33,7 @@
 		</div>
 	</section>
 
-	<section style="padding: 20px 0;" id="variestas" class="section scrollspy">
+	<section style="padding: 20px 0;" id="berita" class="section scrollspy">
 		<div class="container">
 			<div class="row">
 				<h3 class="center grey-text text-darken-3">Daftar Berita</h3>
