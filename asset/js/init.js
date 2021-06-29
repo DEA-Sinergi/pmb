@@ -2,8 +2,8 @@
   $(function(){
 
     $('.sidenav').sidenav();
-    $('.scrollspy').scrollSpy();
     $('.parallax').parallax();
+    $('.scrollspy').scrollSpy({scrollOffset: 10});
     $('.slider').slider();
     $('.modal').modal();
     $('.tabs').tabs();
